@@ -4,72 +4,89 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   height: 100vh;
-   background-color: #3A4A7D;
-}
-
-
-.container {
-    display: flex;
-    align-items: center;
+body {
+    display:flex;
+    align-content: center;
     justify-content: center;
-    width: 90vw;
-    
-}
-
-/*-----------------------------------------------------------*/
-
-.cards {
-    background-image: url(./image/istanbul.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 70px;
-    height: 450px;
-    border-radius: 50px;
-    margin: 10px;
-    padding: 20px;
-    border:solid #fff 2px;
-    transition: width 0.5s;
-
-}
-
-.cards:nth-child(2) {
-    background-image: url(./image/ankara.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-.cards:nth-child(3) {
-    background-image: url(./image/trabzon.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-.cards:nth-child(4) {
-    background-image: url(./image/antalya.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-/*-----------------------------------------------------------*/
-
-.cards h3 {
-    color: #fff;
+    padding-top: 150px;
+    background-color: #F5F5F5;
+  }
+  
+.container {
+    position: absolute;
+    display:flex;
+    align-content: center;
+    justify-content: space-between;
+    width:280px;
+    font-size:18px;
+  }
+  
+.circle {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius:50px;
+    border: 2px solid #8A8D90;
+    z-index:1;
     position: relative;
-    top: 410px;
-    opacity: 0;
-    transition: opacity 1s ;
-}
+    top:2px
+   }
+  
+.active {
+    border: 2px solid #3876BF;
+    color: #3876BF;
+    transition: 0.9s;
+  }
+  
+.line {
+    background-color: #3876BF;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    height: 4px;
+    width: 0px;
+    top: 50%;
+    left:0;
+    transition: width 0.7s;
+  }
+  
+.line2 {
+    background-color: #E3E3E3;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    height: 4px;
+    width: 90%;
+    top: 50%;
+    left:0;
+    z-index: -1;
+  }
+  
+.btns-container {
+    position: relative;
+    top: 60px;
+    display:flex;
+    justify-content: space-between;
+    width: 180px;
+  }
+  
+.btns {
+    background-color: #3876BF;
+    color: #fff;
+    width: 80px;
+    height: 30px;
+    border-style:none;
+    font-size: 16px;
+    border-radius:50px;
+    cursor: pointer;
+  }
 
-.cards:hover {
-    width: 650px;
+.disabedBtn {
+  background-color: #fff;
+  color: #3876BF;
+  cursor: default;
 }
-
-.cards:hover h3{
-    opacity: 1;
-}
+  
